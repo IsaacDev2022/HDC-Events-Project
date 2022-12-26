@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">HDCEventsApp2.0</string>
+
+    <!-- Strings da aplicação -->
+    <!-- Strings de evento -->
+    <string name="success_inserted">Evento inserido com sucesso!</string>
+    <string name="success_updated">Evento alterado com sucesso!</string>
+    <string name="success_deleted">Evento deletado com sucesso!</string>
+
+    <!-- Strings de usuário -->
+    <string name="success_user_inserted">Usuário cadastrado com sucesso!</string>
+    <string name="success_user_logged">Login efetuado com sucesso!</string>
+    <string name="error_user_register">Ocorreu uma falha no cadastro de usuário, tente novamente!</string>
+
+    <!-- Strings de login -->
+    <string name="login_action_bar_title">Login</string>
+    <string name="login_input_layout_hint_username">Nome de usuário</string>
+    <string name="login_input_layout_hint_password">Senha</string>
+    <string name="login_input_layout_error_invalid_username">Nome de usuário inválido</string>
+    <string name="login_input_layout_error_invalid_password">Senha inválida</string>
+    <string name="error_authentication">Autenticação inválida, tente novamente!</string>
+
+    <string name="error">Ocorreu uma falha, tente novamente!</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_register">Cadastrar Evento</string>
+    <string name="logout">Sair</string>
+</resources>
