@@ -41,14 +41,8 @@ class ProfileFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        loginViewModel.authenticationStateEvent.observe(viewLifecycleOwner) { authentication ->
-            when (authentication) {
-                is LoginViewModel.AuthenticationState.Authenticated -> {
-
-                }
-
-                else -> {}
-            }
+        loginViewModel.userState.observe(viewLifecycleOwner) { user ->
+            binding.tvUserNameProfile.setText(user[0].nameUser)
         }
     }
 }

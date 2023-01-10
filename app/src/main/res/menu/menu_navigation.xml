@@ -11,7 +11,7 @@
             android:id="@+id/eventFragment"
             android:title="Cadastrar Evento" />
         <item
-            android:id="@+id/nav_logout"
+            android:id="@+id/navLogout"
             android:title="Sair" />
     </group>
 </menu>

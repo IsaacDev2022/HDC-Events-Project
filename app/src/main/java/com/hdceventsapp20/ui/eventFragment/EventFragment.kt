@@ -11,7 +11,6 @@ import androidx.lifecycle.ViewModel
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.google.android.material.snackbar.Snackbar
-import com.hdceventsapp20.R
 import com.hdceventsapp20.databinding.FragmentEventBinding
 import com.hdceventsapp20.model.dao.eventDAO.EventDAO
 import com.hdceventsapp20.model.db.AppDatabase
@@ -48,13 +47,13 @@ class EventFragment : Fragment() {
 
         args.event?.let { event ->
             binding.buttonRegister.setText("Atualizar")
-            binding.edNameEvent.setText(event.nameEvent)
-            binding.edDateEvent.setText(event.dateEvent)
-            binding.edTimeEvent.setText(event.timeEvent)
-            binding.edCity.setText(event.city)
-            binding.edType.setText(event.type)
-            binding.edPrivateOrPublic.setText(event.privateOrPublic)
-            binding.edDescription.setText(event.description)
+            binding.inputNameEvent.setText(event.nameEvent)
+            binding.inputDateEvent.setText(event.dateEvent)
+            binding.inputTimeEvent.setText(event.timeEvent)
+            binding.inputCity.setText(event.city)
+            binding.inputType.setText(event.type)
+            binding.inputPrivateOrPublic.setText(event.privateOrPublic)
+            binding.inputDescription.setText(event.description)
 
             binding.buttonDelete.visibility = View.VISIBLE
         }
@@ -82,13 +81,13 @@ class EventFragment : Fragment() {
 
     private fun insertEvent() {
         binding.buttonRegister.setOnClickListener {
-            val nameEvent = binding.edNameEvent.text.toString()
-            val dateEvent = binding.edDateEvent.text.toString()
-            val timeEvent = binding.edTimeEvent.text.toString()
-            val city = binding.edCity.text.toString()
-            val type = binding.edType.text.toString()
-            val privateOrPublic = binding.edPrivateOrPublic.text.toString()
-            val description = binding.edDescription.text.toString()
+            val nameEvent = binding.inputNameEvent.text.toString()
+            val dateEvent = binding.inputDateEvent.text.toString()
+            val timeEvent = binding.inputTimeEvent.text.toString()
+            val city = binding.inputCity.text.toString()
+            val type = binding.inputType.text.toString()
+            val privateOrPublic = binding.inputPrivateOrPublic.text.toString()
+            val description = binding.inputDescription.text.toString()
 
             viewModel.addOrUpdate(
                 nameEvent,

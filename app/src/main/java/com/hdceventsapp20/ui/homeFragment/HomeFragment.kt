@@ -36,7 +36,6 @@ class HomeFragment : Fragment() {
         }
     }
 
-    // private val loginViewModel: LoginViewModel by activityViewModels()
     private val loginViewModel: LoginViewModel by activityViewModels {
         object : ViewModelProvider.Factory {
             override fun <T : ViewModel> create(modelCLass: Class<T>): T {
@@ -67,7 +66,7 @@ class HomeFragment : Fragment() {
     }
 
     private fun checkAuthenticated() {
-        loginViewModel.authenticationStateEvent.observe(viewLifecycleOwner) { authenticationState ->
+        loginViewModel._authenticationStateEvent.observe(viewLifecycleOwner) { authenticationState ->
             when (authenticationState) {
                 is LoginViewModel.AuthenticationState.Unauthenticated -> {
                     findNavController().navigate(R.id.loginFragment)

@@ -24,7 +24,6 @@ class LoginFragment : Fragment() {
     private var _binding: FragmentLoginBinding? = null
     private val binding get() = _binding!!
 
-    // private val loginViewModel: LoginViewModel by activityViewModels()
     private val loginViewModel: LoginViewModel by activityViewModels {
         object : ViewModelProvider.Factory {
             override fun <T : ViewModel> create(modelCLass: Class<T>): T {
@@ -51,7 +50,7 @@ class LoginFragment : Fragment() {
     }
 
     private fun listenToAuthentication() {
-        loginViewModel.authenticationStateEvent.observe(viewLifecycleOwner) { authenticationState ->
+        loginViewModel._authenticationStateEvent.observe(viewLifecycleOwner) { authenticationState ->
             when (authenticationState) {
                 is LoginViewModel.AuthenticationState.Authenticated -> {
                     findNavController().popBackStack()

@@ -6,75 +6,138 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.eventFragment.EventFragment">
 
-    <EditText
-        android:id="@+id/ed_nameEvent"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputLayoutNameEvent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:hint="Nome de usuário"
         android:layout_margin="24dp"
-        android:hint="Nome do evento"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent">
 
-    <EditText
-        android:id="@+id/ed_dateEvent"
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/inputNameEvent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionNext"
+            android:inputType="text" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputLayoutDateEvent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:hint="Data do evento"
         android:layout_margin="24dp"
-        android:hint="00/00/0000"
-        app:layout_constraintTop_toBottomOf="@+id/ed_nameEvent"
+        app:layout_constraintTop_toBottomOf="@id/inputLayoutNameEvent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent">
 
-    <EditText
-        android:id="@+id/ed_timeEvent"
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/inputDateEvent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionNext"
+            android:inputType="text" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputLayoutTimeEvent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="24dp"
         android:hint="00:00"
-        app:layout_constraintTop_toBottomOf="@+id/ed_dateEvent"
+        android:layout_margin="24dp"
+        app:layout_constraintTop_toBottomOf="@id/inputLayoutDateEvent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent">
 
-    <EditText
-        android:id="@+id/ed_city"
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/inputTimeEvent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionNext"
+            android:inputType="text" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputLayoutCity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="24dp"
         android:hint="Cidade"
-        app:layout_constraintTop_toBottomOf="@+id/ed_timeEvent"
+        android:layout_margin="24dp"
+        app:layout_constraintTop_toBottomOf="@id/inputLayoutTimeEvent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent">
 
-    <EditText
-        android:id="@+id/ed_type"
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/inputCity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionNext"
+            android:inputType="text" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputLayoutType"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="24dp"
         android:hint="Tipo de evento"
-        app:layout_constraintTop_toBottomOf="@+id/ed_city"
+        android:layout_margin="24dp"
+        app:layout_constraintTop_toBottomOf="@id/inputLayoutCity"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent">
 
-    <EditText
-        android:id="@+id/ed_privateOrPublic"
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/inputType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionNext"
+            android:inputType="text" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputLayoutPrivateOrPublic"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:hint="Público ou privado"
         android:layout_margin="24dp"
-        android:hint="Privado ou público"
-        app:layout_constraintTop_toBottomOf="@+id/ed_type"
+        app:layout_constraintTop_toBottomOf="@id/inputLayoutType"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent">
 
-    <EditText
-        android:id="@+id/ed_description"
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/inputPrivateOrPublic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionNext"
+            android:inputType="text" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputLayoutDescription"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="24dp"
         android:hint="Descrição"
-        app:layout_constraintTop_toBottomOf="@+id/ed_privateOrPublic"
+        android:layout_margin="24dp"
+        app:layout_constraintTop_toBottomOf="@id/inputLayoutPrivateOrPublic"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/inputDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionNext"
+            android:inputType="text" />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/button_register"
@@ -86,7 +149,7 @@
         android:layout_marginTop="15dp"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
-        app:layout_constraintTop_toBottomOf="@id/ed_description"
+        app:layout_constraintTop_toBottomOf="@id/inputLayoutDescription"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 

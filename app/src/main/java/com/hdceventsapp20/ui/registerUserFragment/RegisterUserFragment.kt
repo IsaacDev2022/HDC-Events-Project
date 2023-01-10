@@ -64,11 +64,11 @@ class RegisterUserFragment : Fragment() {
 
     private fun registerUser() {
         binding.btnRegisterUser.setOnClickListener {
-            val userName = binding.edUserName.text.toString()
-            val userCpf = binding.edUserCpf.text.toString()
-            val userAge = binding.edUserAge.text.toString()
-            val userEmail = binding.edUserEmail.text.toString()
-            val userPassword = binding.edUserPassword.text.toString()
+            val userName = binding.inputUserName.text.toString()
+            val userCpf = binding.inputCpf.text.toString()
+            val userAge = binding.inputAge.text.toString()
+            val userEmail = binding.inputEmail.text.toString()
+            val userPassword = binding.inputPassword.text.toString()
 
             viewModel.insertUser(
                 userName,

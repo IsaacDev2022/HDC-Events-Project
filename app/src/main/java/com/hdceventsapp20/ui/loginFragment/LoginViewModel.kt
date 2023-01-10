@@ -21,9 +21,7 @@ class LoginViewModel(
         class InvalidAuthentication(val fields: List<Pair<String, Int>>) : AuthenticationState()
     }
 
-    private val _authenticationStateEvent = MutableLiveData<AuthenticationState>()
-    val authenticationStateEvent: LiveData<AuthenticationState>
-        get() = _authenticationStateEvent
+    val _authenticationStateEvent = MutableLiveData<AuthenticationState>()
 
     private val _messageAuthenticationState = MutableLiveData<Int>()
     val messageAuthenticationState: LiveData<Int>
@@ -43,6 +41,7 @@ class LoginViewModel(
 
     fun authentication(email: String, password: String) = viewModelScope.launch {
         val repository = userRepository.selectUser(email, password)
+        _userState.postValue(userRepository.selectUser(email, password))
 
         if (repository.isNotEmpty()) {
             _authenticationStateEvent.value = AuthenticationState.Authenticated
